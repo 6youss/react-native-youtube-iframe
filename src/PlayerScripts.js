@@ -69,6 +69,7 @@ export const MAIN_SCRIPT = (
   contentScale,
 ) => {
   const {
+    playsinline,
     end,
     rel,
     color,
@@ -84,6 +85,7 @@ export const MAIN_SCRIPT = (
   } = initialPlayerParams;
 
   // _s postfix to refer to "safe"
+  const playsinline_s = playsinline ? 1 : 0;
   const rel_s = rel ? 1 : 0;
   const loop_s = loop ? 1 : 0;
   const videoId_s = videoId || '';
@@ -151,7 +153,7 @@ export const MAIN_SCRIPT = (
           playerVars: {
             end: ${end},
             rel: ${rel_s},
-            playsinline: 1,
+            playsinline: ${playsinline_s},
             loop: ${loop_s},
             color: ${color},
             start: ${start},
