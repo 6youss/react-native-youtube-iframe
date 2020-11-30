@@ -25,6 +25,7 @@ export interface InitialPlayerParams {
   iv_load_policy?: Number;
   modestbranding?: boolean;
   rel?: boolean;
+  playsinline?: Number;
 }
 
 export interface YoutubeIframeProps {

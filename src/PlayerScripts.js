@@ -69,7 +69,6 @@ export const MAIN_SCRIPT = (
   contentScale,
 ) => {
   const {
-    playsinline,
     end,
     rel,
     color,
@@ -82,10 +81,10 @@ export const MAIN_SCRIPT = (
     controls = true,
     showClosedCaptions,
     preventFullScreen = false,
+    playsinline,
   } = initialPlayerParams;
 
   // _s postfix to refer to "safe"
-  const playsinline_s = playsinline ? 1 : 0;
   const rel_s = rel ? 1 : 0;
   const loop_s = loop ? 1 : 0;
   const videoId_s = videoId || '';
@@ -97,6 +96,7 @@ export const MAIN_SCRIPT = (
   const list = typeof playList === 'string' ? playList : '';
   const listType = typeof playList === 'string' ? 'playlist' : '';
   const contentScale_s = typeof contentScale === 'number' ? contentScale : 1.0;
+  const playsinline_s = playsinline ? 1 : 0;
 
   // scale will either be "initial-scale=1.0"
   let scale = `initial-scale=${contentScale_s}`;
